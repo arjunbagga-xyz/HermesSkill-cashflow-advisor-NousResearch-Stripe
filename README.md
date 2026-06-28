@@ -21,9 +21,8 @@ Existing tools show dashboards. This skill acts.
 4. **Interactive Expense Configuration**: Allows the Hermes Agent or terminal users to list, add, or delete fixed expenses on the fly (e.g. `--add-expense`, `--delete-expense`, `--list-expenses`).
 5. **Accurate 30-Day Projections**: Re-computes daily cash projections, modeling a precise Stripe Capital withholding drag up to the full `advance + fee` cap. Avoids double-counting on transit payouts.
 6. **Decisive CFO-style Briefing**: Generates clean cash flow reports and resolution options. The Hermes Agent LLM natively acts as the CFO to formulate the morning briefing and specific capital recommendation.
-7. **Dual-Scenario Visualizations**: Generates a matplotlib chart (base vs. post-funding projection) saved locally to your charts folder.
-8. **Webhook Simulation Handler**: Listens for confirmation events like `capital.financing_offer.paid_out` via a `--webhook` CLI parameter, logging events to a local ledger.
-9. **Runs Unattended**: Scheduled via `hermes schedule add` at 8am daily or weekly.
+7. **Webhook Simulation Handler**: Listens for confirmation events like `capital.financing_offer.paid_out` via a `--webhook` CLI parameter, logging events to a local ledger.
+8. **Runs Unattended**: Scheduled via `hermes schedule add` at 8am daily or weekly.
 
 ---
 
@@ -143,7 +142,6 @@ Charts save to `%USERPROFILE%\.hermes\cashflow\charts\`
 
 | File | Purpose |
 |------|---------|
-| `demo.py` | Hackathon demo — single command, no flags, streaming output |
 | `cashflow_advisor.py` | Production engine — analysis, Capital logic, chart generation |
 | `SKILL.md` | Hermes skill manifest — MCP tool calls, scheduling, trigger phrases |
 | `config.yaml` | User config — expenses, schedule, alert thresholds |
@@ -160,8 +158,5 @@ Charts save to `%USERPROFILE%\.hermes\cashflow\charts\`
 
 ## Why This Wins
 
-Every other submission will use Stripe to charge users or an external LLM to generate generic summaries. This submission uses Stripe as a **financial data source and lending layer**, and leverages the native Hermes Agent LLM to make a **consequential financial decision** — deciding if, when, and how to borrow to save a business from insolvencies.
-
-The Capital integration is the differentiator. The skill doesn't just say "you have a gap." It provides the exact financial projection ledger and costs of borrowing, allowing the Hermes Agent itself to conclude: "you have a $25,000 offer, the fee is $2,500, missing payroll costs more than that in every dimension that matters — here's the link, click it."
-
-That's an agent that earns its place in a business.
+Instead of creating problems and business logics that collapse upon themsevles, I am trying to solve problems faced by real businesses in real world in real time. Cashflows are never steady, and that causes reputation damage, losses, etc. Lets streamline that first.
+Also, this can be a huge organic marketer for stripe capital. * wink wink *
