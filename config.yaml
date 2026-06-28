@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────────
+# Cash Flow Advisor — Configuration
+# ~/.hermes/skills/cashflow-advisor/config.yaml
+#
+# Fixed expenses are auto-populated by the agent on first run.
+# You can also edit this file directly.
+# ─────────────────────────────────────────────────────────────────
+
+# ── Schedule ──────────────────────────────────────────────────────
+schedule:
+  frequency:   daily      # daily | weekly
+  hour:        8          # 0-23 (24-hour clock)
+  day_of_week: 1          # 1=Monday (only for weekly)
+
+# ── Alert Thresholds ──────────────────────────────────────────────
+alerts:
+  minimum_buffer:    5000   # Warn if projected balance drops below this (USD)
+  projection_days:   30     # Days forward to project
+
+# ── Capital Settings ──────────────────────────────────────────────
+capital:
+  early_pay_discount_pct: 2   # % discount offered to customers for early payment
+
+# ── Fixed Expenses ────────────────────────────────────────────────
+# Auto-populated by agent on first run when you describe your expenses.
+# Format:
+#   description:   string
+#   amount:        USD (not cents)
+#   day_of_month:  1-28
+#   recurring:     true | false
+#   interval:      monthly | biweekly | weekly | once
+#
+# expenses:
+#   - description: "Payroll"
+#     amount: 28000
+#     day_of_month: 1
+#     recurring: true
+#     interval: biweekly
