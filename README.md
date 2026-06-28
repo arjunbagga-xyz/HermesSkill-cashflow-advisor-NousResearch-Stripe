@@ -21,9 +21,8 @@ Existing tools show dashboards. This skill acts.
 4. **Interactive Expense Configuration**: Allows the Hermes Agent or terminal users to list, add, or delete fixed expenses on the fly (e.g. `--add-expense`, `--delete-expense`, `--list-expenses`).
 5. **Accurate 30-Day Projections**: Re-computes daily cash projections, modeling a precise Stripe Capital withholding drag up to the full `advance + fee` cap. Avoids double-counting on transit payouts.
 6. **Decisive CFO-style Briefing**: Generates clean cash flow reports and resolution options. The Hermes Agent LLM natively acts as the CFO to formulate the morning briefing and specific capital recommendation.
-7. **Dual-Scenario Visualizations**: Generates a matplotlib chart (base vs. post-funding projection) saved locally to your charts folder.
-8. **Webhook Simulation Handler**: Listens for confirmation events like `capital.financing_offer.paid_out` via a `--webhook` CLI parameter, logging events to a local ledger.
-9. **Runs Unattended**: Scheduled via `hermes schedule add` at 8am daily or weekly.
+7. **Webhook Simulation Handler**: Listens for confirmation events like `capital.financing_offer.paid_out` via a `--webhook` CLI parameter, logging events to a local ledger.
+8. **Runs Unattended**: Scheduled via `hermes schedule add` at 8am daily or weekly.
 
 ---
 
