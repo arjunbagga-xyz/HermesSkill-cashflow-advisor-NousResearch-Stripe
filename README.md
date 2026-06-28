@@ -160,8 +160,4 @@ Charts save to `%USERPROFILE%\.hermes\cashflow\charts\`
 
 ## Why This Wins
 
-Every other submission will use Stripe to charge users or an external LLM to generate generic summaries. This submission uses Stripe as a **financial data source and lending layer**, and leverages the native Hermes Agent LLM to make a **consequential financial decision** — deciding if, when, and how to borrow to save a business from insolvencies.
-
-The Capital integration is the differentiator. The skill doesn't just say "you have a gap." It provides the exact financial projection ledger and costs of borrowing, allowing the Hermes Agent itself to conclude: "you have a $25,000 offer, the fee is $2,500, missing payroll costs more than that in every dimension that matters — here's the link, click it."
-
-That's an agent that earns its place in a business.
+Instead of creating problems, Lets solve the ones that actually exists in a lot of businesses. cashflow is never perfect, even in the most succesful businesses. Lets solve that.
