@@ -1,0 +1,57 @@
+schedule:
+  frequency: daily
+  hour: 8
+  day_of_week: 1
+alerts:
+  minimum_buffer: 5000
+  projection_days: 30
+  critical_score: 70
+  early_pay_discount_pct: 2.0
+  early_pay_acceptance_rate: 0.35
+delivery:
+  method: terminal
+# ── Stripe Settings ───────────────────────────────────────────────
+stripe:
+  use_demo: false           # Set true to always use demo data
+  # instant_payout_threshold: 10000    # Suggest instant payout if gap > this
+
+# ── Integrations ──────────────────────────────────────────────────
+# Enable other data feeds (QuickBooks, Xero, Plaid)
+integrations:
+  quickbooks:
+    enabled: false
+    # client_id: ""
+  xero:
+    enabled: false
+    # client_id: ""
+  plaid:
+    enabled: false
+    # client_id: ""
+
+# ── Known Fixed Expenses ──────────────────────────────────────────
+expenses:
+- description: "Payroll — Bi-weekly (1st)"
+  amount: 28000
+  day_of_month: 1
+  recurring: true
+  interval: biweekly
+- description: "Payroll — Bi-weekly (15th)"
+  amount: 28000
+  day_of_month: 15
+  recurring: true
+  interval: biweekly
+- description: AWS / Infrastructure
+  amount: 3200
+  day_of_month: 2
+  recurring: true
+  interval: monthly
+- description: Office Rent
+  amount: 4500
+  day_of_month: 7
+  recurring: true
+  interval: monthly
+- description: SaaS Tools (Linear, Notion, Figma, Slack)
+  amount: 850
+  day_of_month: 5
+  recurring: true
+  interval: monthly
