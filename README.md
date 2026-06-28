@@ -26,26 +26,6 @@ Existing tools show dashboards. This skill acts.
 
 ---
 
-## CLI Options (Interactive & Chat Based Management)
-
-The script provides CLI options to allow terminal users and the Hermes Agent to query and modify state directly inside the chat interface:
-
-```powershell
-# List all registered fixed expenses
-python cashflow_advisor.py --list-expenses
-
-# Add or update a fixed expense
-python cashflow_advisor.py --add-expense "Weekly Catering, 600, 5, True, weekly"
-
-# Delete an expense by description
-python cashflow_advisor.py --delete-expense "Weekly Catering"
-
-# Detect recurring expenses from transaction CSV/JSON
-python cashflow_advisor.py --detect-expenses transactions.csv
-
-# Simulate a webhook event (payout landed)
-python cashflow_advisor.py --webhook '{"type": "capital.financing_offer.paid_out", "data": {"object": {"id": "fo_demo_001", "offered_terms": {"advance_amount": 2500000}}}}'
-```
 
 ---
 
